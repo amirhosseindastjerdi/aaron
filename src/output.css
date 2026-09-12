@@ -8,9 +8,6 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-teal-100: oklch(95.3% 0.051 180.801);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
@@ -19,7 +16,8 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
-    --font-weight-light: 300;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -33,6 +31,7 @@
     --color-aaron: #FF9142;
     --font-rubik: "Rubik" , sans-serif;
     --font-syne: "Syne" , sans-serif;
+    --font-inter: "inter" , sans-serif;
   }
 }
 @layer base {
@@ -190,8 +189,23 @@
   .relative {
     position: relative;
   }
+  .-top-0 {
+    top: 0px;
+  }
   .-top-5 {
     top: calc(var(--spacing) * -5);
+  }
+  .-top-7 {
+    top: calc(var(--spacing) * -7);
+  }
+  .-top-8 {
+    top: calc(var(--spacing) * -8);
+  }
+  .-top-10 {
+    top: calc(var(--spacing) * -10);
+  }
+  .-top-18 {
+    top: calc(var(--spacing) * -18);
   }
   .-top-60 {
     top: calc(var(--spacing) * -60);
@@ -253,12 +267,6 @@
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
-  .h-5 {
-    height: calc(var(--spacing) * 5);
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -267,6 +275,9 @@
   }
   .h-15 {
     height: calc(var(--spacing) * 15);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
   }
   .h-35 {
     height: calc(var(--spacing) * 35);
@@ -292,6 +303,9 @@
   .h-\[506px\] {
     height: 506px;
   }
+  .h-px {
+    height: 1px;
+  }
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
@@ -303,6 +317,9 @@
   }
   .w-45 {
     width: calc(var(--spacing) * 45);
+  }
+  .w-56 {
+    width: calc(var(--spacing) * 56);
   }
   .w-64 {
     width: calc(var(--spacing) * 64);
@@ -328,8 +345,11 @@
   .w-\[48\%\] {
     width: 48%;
   }
-  .w-\[48px\] {
-    width: 48px;
+  .w-\[224\] {
+    width: 224;
+  }
+  .w-\[224px\] {
+    width: 224px;
   }
   .w-\[242px\] {
     width: 242px;
@@ -355,20 +375,20 @@
   .items-center {
     align-items: center;
   }
-  .items-end {
-    align-items: flex-end;
+  .items-start {
+    align-items: flex-start;
   }
   .justify-around {
     justify-content: space-around;
-  }
-  .justify-baseline {
-    justify-content: baseline;
   }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-1 {
+    gap: var(--spacing);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -378,6 +398,12 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -391,8 +417,20 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
   .gap-15 {
     gap: calc(var(--spacing) * 15);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+  .gap-48 {
+    gap: calc(var(--spacing) * 48);
+  }
+  .self-center {
+    align-self: center;
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
@@ -426,9 +464,6 @@
   .bg-bg {
     background-color: var(--color-bg);
   }
-  .bg-teal-100 {
-    background-color: var(--color-teal-100);
-  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -437,6 +472,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .font-inter {
+    font-family: var(--font-inter);
   }
   .font-rubik {
     font-family: var(--font-rubik);
@@ -456,6 +494,10 @@
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
+  .text-7xl {
+    font-size: var(--text-7xl);
+    line-height: var(--tw-leading, var(--text-7xl--line-height));
+  }
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -467,6 +509,9 @@
   }
   .text-\[16px\] {
     font-size: 16px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
   }
   .text-\[60px\] {
     font-size: 60px;
@@ -495,6 +540,18 @@
   }
   .text-\[\#949494\] {
     color: #949494;
+  }
+  .text-\[\#F4F7FA\] {
+    color: #F4F7FA;
+  }
+  .text-\[1\] {
+    color: 1;
+  }
+  .text-\[949494\] {
+    color: 949494;
+  }
+  .text-\[F4F7FA\] {
+    color: F4F7FA;
   }
   .text-aaron {
     color: var(--color-aaron);
