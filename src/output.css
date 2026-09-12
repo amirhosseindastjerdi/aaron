@@ -189,23 +189,11 @@
   .relative {
     position: relative;
   }
-  .-top-0 {
-    top: 0px;
-  }
   .-top-5 {
     top: calc(var(--spacing) * -5);
   }
-  .-top-7 {
-    top: calc(var(--spacing) * -7);
-  }
   .-top-8 {
     top: calc(var(--spacing) * -8);
-  }
-  .-top-10 {
-    top: calc(var(--spacing) * -10);
-  }
-  .-top-18 {
-    top: calc(var(--spacing) * -18);
   }
   .-top-60 {
     top: calc(var(--spacing) * -60);
@@ -246,8 +234,14 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
+  }
   .mt-28 {
     margin-top: calc(var(--spacing) * 28);
+  }
+  .mt-36 {
+    margin-top: calc(var(--spacing) * 36);
   }
   .mt-44 {
     margin-top: calc(var(--spacing) * 44);
@@ -345,12 +339,6 @@
   .w-\[48\%\] {
     width: 48%;
   }
-  .w-\[224\] {
-    width: 224;
-  }
-  .w-\[224px\] {
-    width: 224px;
-  }
   .w-\[242px\] {
     width: 242px;
   }
@@ -387,9 +375,6 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-1 {
-    gap: var(--spacing);
-  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -398,9 +383,6 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
-  }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
   }
   .gap-7 {
     gap: calc(var(--spacing) * 7);
@@ -425,9 +407,6 @@
   }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
-  }
-  .gap-48 {
-    gap: calc(var(--spacing) * 48);
   }
   .self-center {
     align-self: center;
@@ -543,15 +522,6 @@
   }
   .text-\[\#F4F7FA\] {
     color: #F4F7FA;
-  }
-  .text-\[1\] {
-    color: 1;
-  }
-  .text-\[949494\] {
-    color: 949494;
-  }
-  .text-\[F4F7FA\] {
-    color: F4F7FA;
   }
   .text-aaron {
     color: var(--color-aaron);
