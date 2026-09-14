@@ -8,16 +8,24 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-100: oklch(93.6% 0.032 17.717);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-3xl: 48rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -29,6 +37,7 @@
     --color-background: #1A1A1A;
     --color-bg: #030304;
     --color-aaron: #FF9142;
+    --font-opensans: "open-sans" ,sans-serif;
     --font-rubik: "Rubik" , sans-serif;
     --font-syne: "Syne" , sans-serif;
     --font-inter: "inter" , sans-serif;
@@ -222,14 +231,26 @@
   .mt-0 {
     margin-top: 0px;
   }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -239,6 +260,9 @@
   }
   .mt-28 {
     margin-top: calc(var(--spacing) * 28);
+  }
+  .mt-32 {
+    margin-top: calc(var(--spacing) * 32);
   }
   .mt-36 {
     margin-top: calc(var(--spacing) * 36);
@@ -291,14 +315,41 @@
   .h-210 {
     height: calc(var(--spacing) * 210);
   }
+  .h-225 {
+    height: calc(var(--spacing) * 225);
+  }
   .h-\[65px\] {
     height: 65px;
   }
   .h-\[506px\] {
     height: 506px;
   }
+  .h-\[800px\] {
+    height: 800px;
+  }
+  .h-\[900px\] {
+    height: 900px;
+  }
+  .h-\[8000px\] {
+    height: 8000px;
+  }
   .h-px {
     height: 1px;
+  }
+  .min-h-0 {
+    min-height: 0px;
+  }
+  .min-h-2 {
+    min-height: calc(var(--spacing) * 2);
+  }
+  .min-h-210 {
+    min-height: calc(var(--spacing) * 210);
+  }
+  .min-h-225 {
+    min-height: calc(var(--spacing) * 225);
+  }
+  .min-h-\[800px\] {
+    min-height: 800px;
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
@@ -308,6 +359,9 @@
   }
   .w-37\.5 {
     width: calc(var(--spacing) * 37.5);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
   }
   .w-45 {
     width: calc(var(--spacing) * 45);
@@ -336,6 +390,9 @@
   .w-187\.5 {
     width: calc(var(--spacing) * 187.5);
   }
+  .w-\[47\%\] {
+    width: 47%;
+  }
   .w-\[48\%\] {
     width: 48%;
   }
@@ -344,6 +401,9 @@
   }
   .w-\[454px\] {
     width: 454px;
+  }
+  .w-\[574px\] {
+    width: 574px;
   }
   .w-full {
     width: 100%;
@@ -383,6 +443,9 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-7 {
     gap: calc(var(--spacing) * 7);
@@ -425,6 +488,19 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-\[\#949493\] {
+    border-color: #949493;
+  }
+  .border-\[\#949494\] {
+    border-color: #949494;
+  }
+  .border-\[\#\] {
+    border-color: #;
+  }
   .border-aaron {
     border-color: var(--color-aaron);
   }
@@ -455,6 +531,9 @@
   .font-inter {
     font-family: var(--font-inter);
   }
+  .font-opensans {
+    font-family: var(--font-opensans);
+  }
   .font-rubik {
     font-family: var(--font-rubik);
   }
@@ -464,6 +543,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -520,8 +603,14 @@
   .text-\[\#949494\] {
     color: #949494;
   }
+  .text-\[\#9494949\] {
+    color: #9494949;
+  }
   .text-\[\#F4F7FA\] {
     color: #F4F7FA;
+  }
+  .text-\[\#\] {
+    color: #;
   }
   .text-aaron {
     color: var(--color-aaron);
@@ -534,6 +623,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .decoration-1 {
+    text-decoration-thickness: 1px;
   }
   .outline {
     outline-style: var(--tw-outline-style);
